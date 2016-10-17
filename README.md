@@ -8,9 +8,17 @@ To allow for metrics aggregation across multiple application instances, standard
 
 
 To run:
-1. Enable Turbine AMQP in your Spring boot Netflix app e.g. use this
-2. Provide your RabbitMQ credentials in application.yml e.g.
-```javascript
+Enable Turbine AMQP in your Spring boot Netflix app e.g. use this sample app
+
+
+https://github.com/bijukunjummen/sample-spring-turbine-amqp/tree/master/sample-hystrix-app 
+
+
+
+Provide your RabbitMQ credentials in application.yml e.g.  
+
+
+```
 hystrix:
   stream:
     queue:
@@ -35,16 +43,24 @@ spring:
       enabled: true
       algorithm: TLSv1.2
 ```
-2. Build server-side dashboard code
-```javascript
+Build server-side dashboard code
+
+
+```
 mnv clean install
 ```
-3. deploy server-side dashboard code
+Deploy server-side dashboard code
+
+
 ```
 cf push hystix-dashboard -p hystrix-dashboard-amqp-websockets/target/hystrix-dashboard-amqp-websockets-0.0.1.war
 ```
 
-4. Run the dashboard
+
+
+Run the dashboard
+
+
 ```
 http://hystrix-dashboard.mybluemix.net/
 ```
