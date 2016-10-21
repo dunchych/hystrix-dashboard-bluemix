@@ -1,0 +1,58 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+
+  <groupId>net.bluemix.netflix</groupId>
+  <artifactId>hystrix-dashboard</artifactId>
+  <packaging>war</packaging>
+  <name>hystrix-dashboard</name>
+  <description>Hystrix Dashboard for Bluemix based on Web sockets and AMQP</description>
+  <version>0.0.1</version>
+
+
+
+
+  <dependencies>
+      <dependency>
+          <groupId>javax.websocket</groupId>
+          <artifactId>javax.websocket-api</artifactId>
+          <version>1.1</version>
+      </dependency>
+      
+      <dependency>
+          <groupId>com.rabbitmq</groupId>
+          <artifactId>amqp-client</artifactId>
+          <version>3.6.5</version>
+      </dependency>
+      
+      <dependency>
+          <groupId>org.json</groupId>
+          <artifactId>json</artifactId>
+          <version>20160810</version>
+      </dependency>
+      
+      
+      <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <version>4.8.2</version>
+          <scope>test</scope>
+      </dependency>
+  </dependencies>
+  
+  <build>
+      <pluginManagement>
+          <plugins>
+              <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-war-plugin</artifactId>
+                  <configuration>
+                      <failOnMissingWebXml>false</failOnMissingWebXml>
+                  </configuration>
+              </plugin>
+          </plugins>
+      </pluginManagement>
+</build>
+  
+</project>
